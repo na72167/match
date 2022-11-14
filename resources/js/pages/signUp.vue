@@ -180,12 +180,13 @@ export default {
           Cookies.set('roll', this.registUser.data.roll);
           this.$store.dispatch("users/setLoginUserInfo");
           // TODO:算出プロパティ部分を見直したのちヘッダー部分に下の処理を移動させる。
-          this.$store.dispatch("header/setHeaderMenuLoggedIn");
+          // this.$store.dispatch("header/setHeaderMenuLoggedIn");
 
           this.signUpButton = SIGNUP_BUTTON.REGISTER_BUTTON;
           this.isSubmit = false;
           this.$store.dispatch("tool/clearLoading");
 
+          // TODO:urlのパラメーターのハッシュ化を検討する。
           this.$router.push(`/mypage/${Cookies.get('user_id')}`)
         } catch (e) {
           console.log("登録処理中に例外エラーが発生しました。");
