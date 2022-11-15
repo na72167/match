@@ -6,6 +6,7 @@ import Top from '../pages/Top.vue'
 import SignUp from '../pages/SignUp.vue'
 import Login from '../pages/Login.vue'
 import PasswordChange from '../pages/passwordChange.vue'
+import MyPage from '../pages/MyPage.vue'
 
 Vue.use(VueRouter)
 
